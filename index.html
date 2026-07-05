@@ -116,6 +116,15 @@
   .logos p{color:#93a1c2;font-size:13px;letter-spacing:1px;text-transform:uppercase;margin-bottom:16px}
   .logos .row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
   .chip{border:1px solid rgba(255,255,255,.2);border-radius:30px;padding:9px 18px;font-family:'Montserrat';font-weight:600;font-size:14px;color:#e6ecf8}
+  a.chip{display:inline-block;transition:.2s;cursor:pointer}
+  a.chip:hover{background:var(--gold);color:#1a1a1a;border-color:var(--gold);transform:translateY(-2px)}
+
+  /* clickable cards */
+  a.card,a.who,a.range-card,a.step{display:block;color:inherit;cursor:pointer}
+  .who,.step,.range-card{transition:.2s}
+  a.who:hover,a.step:hover,a.range-card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(31,56,100,.12);border-color:transparent}
+  .more{display:inline-block;margin-top:14px;font-family:'Montserrat';font-weight:700;font-size:13px;letter-spacing:.3px;color:var(--gold-deep)}
+  a.who .more,a.range-card .more{color:var(--navy2)}
 
   /* BEYOND / RANGE */
   .range{background:var(--sand)}
@@ -279,10 +288,10 @@
     <h2>If you run a venue in Lagos, this is for you.</h2>
     <p class="lead">Different rooms, same problems: slow nights, service that slips, and contracts left on the table. I have worked all of them.</p>
     <div class="who-grid">
-      <div class="who"><div class="emo">&#127976;</div><h3>Hotels &amp; Suites</h3><p>Low occupancy, weak corporate booking, and operations that leak money across departments.</p></div>
-      <div class="who"><div class="emo">&#127864;</div><h3>Lounges &amp; Bars</h3><p>Quiet weekday nights, thin margins, and events that never quite sell out.</p></div>
-      <div class="who"><div class="emo">&#127869;</div><h3>Restaurants</h3><p>Inconsistent service, poor upselling, and no system to bring guests back.</p></div>
-      <div class="who"><div class="emo">&#127881;</div><h3>Event Centres</h3><p>Underused spaces, one-off bookings, and no pipeline of corporate or private clients.</p></div>
+      <a class="who" href="#services"><div class="emo">&#127976;</div><h3>Hotels &amp; Suites</h3><p>Low occupancy, weak corporate booking, and operations that leak money across departments.</p><span class="more">See what I do &rarr;</span></a>
+      <a class="who" href="#services"><div class="emo">&#127864;</div><h3>Lounges &amp; Bars</h3><p>Quiet weekday nights, thin margins, and events that never quite sell out.</p><span class="more">See what I do &rarr;</span></a>
+      <a class="who" href="#services"><div class="emo">&#127869;</div><h3>Restaurants</h3><p>Inconsistent service, poor upselling, and no system to bring guests back.</p><span class="more">See what I do &rarr;</span></a>
+      <a class="who" href="#services"><div class="emo">&#127881;</div><h3>Event Centres</h3><p>Underused spaces, one-off bookings, and no pipeline of corporate or private clients.</p><span class="more">See what I do &rarr;</span></a>
     </div>
   </div>
 </section>
@@ -294,12 +303,12 @@
     <h2>Business support built for hospitality.</h2>
     <p class="lead">Practical help for owners and managers who want fuller venues and less chaos. Every engagement starts with a free 20-minute audit.</p>
     <div class="cards">
-      <div class="card"><div class="ico">01</div><h3>Operations &amp; Revenue Audit</h3><p>A clear-eyed look at bookings, service, and costs, with the exact leaks costing you money and how to fix them.</p></div>
-      <div class="card"><div class="ico">02</div><h3>Packages &amp; Pricing</h3><p>Seasonal packages, promotions, and pricing that fill slow nights and lift spend per guest.</p></div>
-      <div class="card"><div class="ico">03</div><h3>Staff Training</h3><p>Front-line training on service, upselling, and organization that guests feel and owners see.</p></div>
-      <div class="card"><div class="ico">04</div><h3>Proposals &amp; Bids</h3><p>Winning proposals and tenders that land corporate retreats, partnerships, and government contracts.</p></div>
-      <div class="card"><div class="ico">05</div><h3>Event Design &amp; Delivery</h3><p>Concept-to-execution event packages for lounges, hotels, and event centres that sell out.</p></div>
-      <div class="card"><div class="ico">06</div><h3>Ongoing Support</h3><p>A monthly retainer that keeps operations, marketing, and growth moving without the overwhelm.</p></div>
+      <a class="card" href="https://wa.me/message/EQCIJZAHGFGKD1" target="_blank" rel="noopener"><div class="ico">01</div><h3>Operations &amp; Revenue Audit</h3><p>A clear-eyed look at bookings, service, and costs, with the exact leaks costing you money and how to fix them.</p><span class="more">Book this &rarr;</span></a>
+      <a class="card" href="https://wa.me/message/EQCIJZAHGFGKD1" target="_blank" rel="noopener"><div class="ico">02</div><h3>Packages &amp; Pricing</h3><p>Seasonal packages, promotions, and pricing that fill slow nights and lift spend per guest.</p><span class="more">Book this &rarr;</span></a>
+      <a class="card" href="https://wa.me/message/EQCIJZAHGFGKD1" target="_blank" rel="noopener"><div class="ico">03</div><h3>Staff Training</h3><p>Front-line training on service, upselling, and organization that guests feel and owners see.</p><span class="more">Book this &rarr;</span></a>
+      <a class="card" href="https://wa.me/message/EQCIJZAHGFGKD1" target="_blank" rel="noopener"><div class="ico">04</div><h3>Proposals &amp; Bids</h3><p>Winning proposals and tenders that land corporate retreats, partnerships, and government contracts.</p><span class="more">Book this &rarr;</span></a>
+      <a class="card" href="https://wa.me/message/EQCIJZAHGFGKD1" target="_blank" rel="noopener"><div class="ico">05</div><h3>Event Design &amp; Delivery</h3><p>Concept-to-execution event packages for lounges, hotels, and event centres that sell out.</p><span class="more">Book this &rarr;</span></a>
+      <a class="card" href="https://wa.me/message/EQCIJZAHGFGKD1" target="_blank" rel="noopener"><div class="ico">06</div><h3>Ongoing Support</h3><p>A monthly retainer that keeps operations, marketing, and growth moving without the overwhelm.</p><span class="more">Book this &rarr;</span></a>
     </div>
   </div>
 </section>
@@ -324,12 +333,12 @@
     <div class="logos">
       <p>Selected proposals and clients</p>
       <div class="row">
-        <span class="chip">ICS-MOFI (Government)</span>
-        <span class="chip">FAM Nigeria</span>
-        <span class="chip">EveryStylishMan</span>
-        <span class="chip">R&amp;A Body Goals</span>
-        <span class="chip">Pen &amp; Paper Survey</span>
-        <span class="chip">RIVR Research</span>
+        <a class="chip" href="https://wa.me/message/EQCIJZAHGFGKD1" target="_blank" rel="noopener">ICS-MOFI (Government)</a>
+        <a class="chip" href="https://wa.me/message/EQCIJZAHGFGKD1" target="_blank" rel="noopener">FAM Nigeria</a>
+        <a class="chip" href="https://wa.me/message/EQCIJZAHGFGKD1" target="_blank" rel="noopener">EveryStylishMan</a>
+        <a class="chip" href="https://wa.me/message/EQCIJZAHGFGKD1" target="_blank" rel="noopener">R&amp;A Body Goals</a>
+        <a class="chip" href="https://wa.me/message/EQCIJZAHGFGKD1" target="_blank" rel="noopener">Pen &amp; Paper Survey</a>
+        <a class="chip" href="https://wa.me/message/EQCIJZAHGFGKD1" target="_blank" rel="noopener">RIVR Research</a>
       </div>
     </div>
   </div>
@@ -342,12 +351,12 @@
     <h2>A wider toolkit, working for you.</h2>
     <p class="lead">Hospitality is the focus, but the same analytical eye and writing craft power everything below.</p>
     <div class="range-grid">
-      <div class="range-card"><div class="rk">Proposals</div><h3>Proposals &amp; Bid Writing</h3><p>Business proposals, RFP responses, pitch decks, and government technical bids, with a 90 percent success rate.</p></div>
-      <div class="range-card"><div class="rk">Research</div><h3>Research &amp; Academic Support</h3><p>Support for 20-plus MSc and PhD projects across four countries: literature reviews, systematic reviews, and data analysis.</p></div>
-      <div class="range-card"><div class="rk">Training</div><h3>Content-Marketing Training</h3><p>Three editions delivered to 60-plus participants through Mag Careers Training Solutions.</p></div>
-      <div class="range-card"><div class="rk">Media</div><h3>ASEG</h3><p>Founder of the Amateur Stock Exchange Group, a plain-language platform teaching Nigerians to read the markets.</p><a href="https://olasaheed.substack.com" target="_blank" rel="noopener">Read on Substack &rarr;</a></div>
-      <div class="range-card"><div class="rk">Author</div><h3>The Roy-Akan Matrix</h3><p>A practical productivity and organizational-skills framework, used in corporate training to help teams do more with less stress.</p></div>
-      <div class="range-card"><div class="rk">Network</div><h3>TalentConnect Plus</h3><p>A vetted network of technical, operational, and professional service providers, on call as a business-support add-on.</p></div>
+      <a class="range-card" href="https://wa.me/message/EQCIJZAHGFGKD1" target="_blank" rel="noopener"><div class="rk">Proposals</div><h3>Proposals &amp; Bid Writing</h3><p>Business proposals, RFP responses, pitch decks, and government technical bids, with a 90 percent success rate.</p><span class="more">Request a proposal &rarr;</span></a>
+      <a class="range-card" href="https://wa.me/message/EQCIJZAHGFGKD1" target="_blank" rel="noopener"><div class="rk">Research</div><h3>Research &amp; Academic Support</h3><p>Support for 20-plus MSc and PhD projects across four countries: literature reviews, systematic reviews, and data analysis.</p><span class="more">Get research help &rarr;</span></a>
+      <a class="range-card" href="https://wa.me/message/EQCIJZAHGFGKD1" target="_blank" rel="noopener"><div class="rk">Training</div><h3>Content-Marketing Training</h3><p>Three editions delivered to 60-plus participants through Mag Careers Training Solutions.</p><span class="more">Book training &rarr;</span></a>
+      <a class="range-card" href="https://olasaheed.substack.com" target="_blank" rel="noopener"><div class="rk">Media</div><h3>ASEG</h3><p>Founder of the Amateur Stock Exchange Group, a plain-language platform teaching Nigerians to read the markets.</p><span class="more">Read on Substack &rarr;</span></a>
+      <a class="range-card" href="https://linkedin.com/in/olasaheed" target="_blank" rel="noopener"><div class="rk">Author</div><h3>The Roy-Akan Matrix</h3><p>A practical productivity and organizational-skills framework, used in corporate training to help teams do more with less stress.</p><span class="more">See on LinkedIn &rarr;</span></a>
+      <a class="range-card" href="https://wa.me/message/EQCIJZAHGFGKD1" target="_blank" rel="noopener"><div class="rk">Network</div><h3>TalentConnect Plus</h3><p>A vetted network of technical, operational, and professional service providers, on call as a business-support add-on.</p><span class="more">Ask about it &rarr;</span></a>
     </div>
   </div>
 </section>
@@ -358,9 +367,9 @@
     <div class="tag">How it works</div>
     <h2>Simple, fast, and low-risk.</h2>
     <div class="steps">
-      <div class="step"><b>STEP 1</b><h3>Free audit</h3><p>A 20-minute look at your bookings, service, and costs. You leave with three specific fixes, no charge.</p></div>
-      <div class="step"><b>STEP 2</b><h3>Quick-win plan</h3><p>A short, prioritized plan: what to fix first, what it is worth, and how we do it together.</p></div>
-      <div class="step"><b>STEP 3</b><h3>We deliver</h3><p>Training, packages, proposals, or ongoing support, done with you until the result shows up.</p></div>
+      <a class="step" href="https://wa.me/message/EQCIJZAHGFGKD1" target="_blank" rel="noopener"><b>STEP 1</b><h3>Free audit</h3><p>A 20-minute look at your bookings, service, and costs. You leave with three specific fixes, no charge.</p><span class="more">Start here &rarr;</span></a>
+      <a class="step" href="https://wa.me/message/EQCIJZAHGFGKD1" target="_blank" rel="noopener"><b>STEP 2</b><h3>Quick-win plan</h3><p>A short, prioritized plan: what to fix first, what it is worth, and how we do it together.</p><span class="more">Get your plan &rarr;</span></a>
+      <a class="step" href="https://wa.me/message/EQCIJZAHGFGKD1" target="_blank" rel="noopener"><b>STEP 3</b><h3>We deliver</h3><p>Training, packages, proposals, or ongoing support, done with you until the result shows up.</p><span class="more">Let us deliver &rarr;</span></a>
     </div>
   </div>
 </section>
