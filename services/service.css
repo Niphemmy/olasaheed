@@ -155,6 +155,28 @@ footer a{color:#e6ecf8}
 .bookbar{position:fixed;left:0;right:0;bottom:0;z-index:40;background:#fff;border-top:1px solid var(--line);padding:12px 18px;display:none;box-shadow:0 -8px 24px rgba(0,0,0,.08)}
 .bookbar .btn{width:100%;text-align:center}
 
+/* clickable included items */
+.inc{cursor:pointer}
+.inc .more2{display:inline-block;margin-top:12px;font-family:'Montserrat';font-weight:700;font-size:13px;color:var(--gold-deep)}
+
+/* timed result pill under rings */
+.rtime{display:inline-block;margin-top:10px;background:var(--sand);border:1px solid var(--line);color:var(--navy);font-family:'Montserrat';font-weight:700;font-size:12px;padding:4px 13px;border-radius:20px}
+
+/* detail (crazy-details) modal */
+.modal.modal-lg{max-width:640px;text-align:left;max-height:88vh;overflow-y:auto}
+.dt .dtag{color:var(--gold-deep);font-family:'Montserrat';font-weight:700;letter-spacing:1.5px;text-transform:uppercase;font-size:12px;margin-bottom:8px}
+.dt h3{color:var(--navy);font-size:24px;margin-bottom:12px;font-family:'Montserrat'}
+.dt p{color:var(--grey);font-size:15.5px;margin-bottom:14px}
+.dt h4{color:var(--navy);font-family:'Montserrat';font-size:15px;margin:18px 0 10px}
+.dt ul{list-style:none;margin-bottom:6px}
+.dt li{position:relative;padding-left:26px;margin-bottom:9px;font-size:15px;color:var(--charcoal)}
+.dt li::before{content:'\2713';position:absolute;left:0;top:0;color:var(--gold-deep);font-weight:800}
+.dt .eg{background:var(--sand);border-left:3px solid var(--gold);border-radius:8px;padding:14px 16px;font-size:14.5px;color:#3a4150;margin:14px 0}
+.dt .eg b{color:var(--navy);font-family:'Montserrat'}
+.dt .res{display:flex;align-items:center;gap:10px;margin-top:6px;font-size:14.5px;color:var(--navy);font-family:'Montserrat';font-weight:600}
+.dt .res .rr{background:var(--gold);color:#1a1a1a;border-radius:6px;padding:3px 9px;font-weight:800;font-size:13px}
+.book-inline{margin-top:22px;padding-top:18px;border-top:1px solid var(--line);text-align:center}
+
 @media(max-width:820px){
   .pain-grid,.inc-grid,.checks,.ba{grid-template-columns:1fr}
   .flow{grid-template-columns:1fr 1fr;row-gap:34px}

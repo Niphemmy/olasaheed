@@ -1,28 +1,33 @@
-// Shared "Book this" modal behaviour for service detail pages
+// Shared modal behaviour for service detail pages (book modal + included-item detail modal)
 (function () {
-  var overlay = document.getElementById('bookModal');
-  if (!overlay) return;
+  var book = document.getElementById('bookModal');
+  var detail = document.getElementById('detailModal');
+  var body = document.getElementById('detailBody');
 
-  function open() { overlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
-  function close() { overlay.classList.remove('open'); document.body.style.overflow = ''; }
+  function open(m) { if (!m) return; m.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeAll() {
+    document.querySelectorAll('.modal-overlay.open').forEach(function (m) { m.classList.remove('open'); });
+    document.body.style.overflow = '';
+  }
 
-  // any element with data-book opens the modal
-  document.querySelectorAll('[data-book]').forEach(function (el) {
-    el.addEventListener('click', function (e) { e.preventDefault(); open(); });
+  // Delegated clicks so injected buttons work too
+  document.addEventListener('click', function (e) {
+    var d = e.target.closest('[data-detail]');
+    if (d) { e.preventDefault(); var s = document.getElementById(d.getAttribute('data-detail')); if (s && body) { body.innerHTML = s.innerHTML; closeAll(); open(detail); } return; }
+    var b = e.target.closest('[data-book]');
+    if (b) { e.preventDefault(); closeAll(); open(book); return; }
+    var c = e.target.closest('.modal-overlay .close');
+    if (c) { closeAll(); return; }
+    var ov = e.target.closest('.modal-overlay');
+    if (ov && e.target === ov) { closeAll(); return; }
   });
 
-  // close controls
-  overlay.addEventListener('click', function (e) { if (e.target === overlay) close(); });
-  var x = overlay.querySelector('.close');
-  if (x) x.addEventListener('click', close);
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeAll(); });
 
-  // auto-open once when the reader nears the end (the page has done the selling)
+  // Auto-open the booking prompt once, after the reader nears the end
   var fired = false;
   window.addEventListener('scroll', function () {
-    if (fired) return;
-    var scrolled = window.scrollY + window.innerHeight;
-    var trigger = document.body.scrollHeight * 0.82;
-    if (scrolled >= trigger) { fired = true; open(); }
+    if (fired || !book) return;
+    if (window.scrollY + window.innerHeight >= document.body.scrollHeight * 0.82) { fired = true; open(book); }
   }, { passive: true });
 })();
